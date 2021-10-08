@@ -5,6 +5,7 @@ import "./CSS/index.css"
 const App = () => {
     const[ count ,setCount] = useState(1);
     const [text, setText] = useState([])
+    //default behaviour pprevention
     const handleSubmit = (e)=>{
         e.preventDefault();
         let amount = parseInt(count);
