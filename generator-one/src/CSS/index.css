@@ -220,6 +220,7 @@ input {
 
 button {
     background: var(--clr-primary-10);
+    padding:20px;
 }
 
 .result {
