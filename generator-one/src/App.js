@@ -24,6 +24,7 @@ const App = () => {
 <button type="submit" className="btn"> Generate</button>
 </form>
 <article className="lorem-text">
+{/* map over the data  */}
     <p> If you want to become a web developer, you’ll be wondering what programming languages to learn. Not only that, you’ll want to know what languages you should focus on first. Do you start with the easiest ones? Or the most useful ones? Both? With so many options these days, why learn JavaScript?</p>
     {text.map((value, index)=>{
         return <p key={index}>{value}</p>
