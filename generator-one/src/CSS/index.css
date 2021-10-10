@@ -189,6 +189,7 @@ main {
 Lorem Ipsum
 ===============
 */
+/* refer to the variable declaration and initiliastion section on the top */
 h3 {
     text-transform: uppercase;
     color: var(--clr-primary-1);
