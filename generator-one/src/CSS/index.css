@@ -11,4 +11,48 @@ body{
     background-color: #242B2E;
     color: rgb(218, 207, 207);
     font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+        color: azure;
+}
+
+main{
+margin-top: 6rem;
+
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    
+}
+label{
+    margin-right: 2rem;
+
+}
+input{
+    outline: none;
+    border: none;
+    font-size: 1.1rem;
+     margin-right: 2rem;
+
+}
+input:active{
+   border: #49a6e9;
+}
+
+.btn{
+    background-color: #49a6e9;
+    font-size: 1.1rem;
+    outline: none;
+    border: none;
+    width: 6.5rem;
+    padding: 1rem;
+    border-radius: 50px;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+
+}.btn:hover{
+    background-color: #98c1df;
 }
