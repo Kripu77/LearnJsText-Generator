@@ -30,6 +30,7 @@ const App = () => {
         <section className='form-container'>
             <form onSubmit={handleSubmit}>
                 <label htmlFor='paragraphs'>Paragraphs:</label>
+                {/* set the count as per the target value */}
                 <input type="number" id="paragraphs" name="paragraphs" value={count} onChange={(e)=>setCount(e.target.value)}></input>
                 <button className="btn" type='submit'  >Generate</button>
             </form>
