@@ -9,7 +9,9 @@ const App = () => {
     const handleSubmit = (e)=>{
         e.preventDefault();
         let amount = parseInt(count);
-        setText(data);
+        const finalData =  [data[count]]
+        console.log(finalData)
+        setText((prevState)=>[...prevState,finalData]);
 
     }
     
