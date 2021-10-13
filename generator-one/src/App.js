@@ -10,15 +10,20 @@ const App = () => {
     const [para, setPara] = useState([])
     const handleSubmit=(e)=>{
         e.preventDefault();
-        if(count>0 ||count<data.length-1){
-       setPara([...para, data[count]])}
-       toast.success("Successfully Generated")
+        if(count>0 && count<data.length-1){
+       setPara([...para, data[count]])
+       toast.success("Successfully Generated")}
         
 
-    }
+ 
     if(count>data.length-1){
         toast.error("You have reached the max paragraph that can be generated")
+        return false;
     }
+    else if(count < 0 ){
+            toast.error("You have reached the minimum paragraph that can be generated")
+            return false;
+    }}
     return (
     <main>
         <h1> Why you should Learn JavaScript Text Generator?</h1>

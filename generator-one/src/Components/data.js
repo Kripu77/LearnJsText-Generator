@@ -1,4 +1,5 @@
 const data = [
+    "",
          "If you want to become a web developer, you’ll be wondering what programming languages to learn. Not only that, you’ll want to know what languages you should focus on first. Do you start with the easiest ones? Or the most useful ones? Both? With so many options these days, why learn JavaScript",
 'The world of web development is constantly moving. With so many new tools popping up all the time, it can be extremely difficult to know where you should focus your efforts. As an aspiring developer, you’ll want to make sure that what you’re learning is still relevant in today’s industry.',
 'If you’re having doubts about this language, don’t. It’s important to note that since its creation in 1995 JavaScript is pretty much everywhere on the web—and that’s not likely to change any time soon. According to the 2021 StackOverflow developer survey, it’s the most commonly used programming language for the ninth year in a row.',
