@@ -56,3 +56,9 @@ input:active{
 }.btn:hover{
     background-color: #98c1df;
 }
+
+.info-display{
+    font-size: 1.8rem;
+    margin: 5rem;
+    text-align: justify;
+}

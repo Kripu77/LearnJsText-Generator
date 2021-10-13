@@ -10,9 +10,14 @@ const App = () => {
     const [para, setPara] = useState([])
     const handleSubmit=(e)=>{
         e.preventDefault();
-       setPara([...para, data[count]])
+        if(count>0 ||count<data.length-1){
+       setPara([...para, data[count]])}
+       toast.success("Successfully Generated")
         
 
+    }
+    if(count>data.length-1){
+        toast.error("You have reached the max paragraph that can be generated")
     }
     return (
     <main>
@@ -20,15 +25,15 @@ const App = () => {
         <section className='form-container'>
             <form onSubmit={handleSubmit}>
                 <label htmlFor='paragraphs'>Paragraphs:</label>
-                <input type="number" id="paragraphs" name="paragraphs" value={count} onChange={()=>setCount(count+1)}></input>
+                <input type="number" id="paragraphs" name="paragraphs" value={count} onChange={(e)=>setCount(e.target.value)}></input>
                 <button className="btn" type='submit'  >Generate</button>
             </form>
-            
+            <ToastContainer/>
 
         </section>
         <section>
             {para.map((value, index)=>{
-                return <p className='info-dislay' key={index}>{value}</p>
+                return <p className='info-display' key={index}>{value}</p>
             })}
         </section>
     </main>
