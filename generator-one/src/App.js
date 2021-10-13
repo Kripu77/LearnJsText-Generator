@@ -39,15 +39,7 @@ else{
 <input type="number" name="amount" id="amount" value={count} onChange={(e)=>setCount(e.target.value)}></input>
 <button type="submit" className="btn"> Generate</button>
 </form>
-   <ToastContainer position="top-center"
-autoClose={5000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover/>
+   <ToastContainer />
 <article className="lorem-text">
 {/* map over the data  */}
     <p> If you want to become a web developer, you’ll be wondering what programming languages to learn. Not only that, you’ll want to know what languages you should focus on first. Do you start with the easiest ones? Or the most useful ones? Both? With so many options these days, why learn JavaScript?</p>
