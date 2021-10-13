@@ -1,6 +1,10 @@
 import React,{useState} from 'react'
 import data from './Components/data'
 import "./CSS/index.css"
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
+
 
 const App = () => {
     const[ count ,setCount] = useState(1);
@@ -12,7 +16,17 @@ const App = () => {
         const finalData =  [data[count]]
         console.log(finalData)
         setText((prevState)=>[...prevState,finalData]);
-
+if(count>6){
+toast.error("Dear user you have reached the max pragraph that can be generated ")
+return false;
+}
+else if(count<0){
+toast.error("Dear user you have reached the minimum pragraph that can be generated ")
+return false;
+}
+else{
+    toast.success("Thank you, your desired paragraph has been generated")
+}
     }
     
     return (
@@ -25,11 +39,14 @@ const App = () => {
 <input type="number" name="amount" id="amount" value={count} onChange={(e)=>setCount(e.target.value)}></input>
 <button type="submit" className="btn"> Generate</button>
 </form>
+   <ToastContainer />
 <article className="lorem-text">
 {/* map over the data  */}
     <p> If you want to become a web developer, you’ll be wondering what programming languages to learn. Not only that, you’ll want to know what languages you should focus on first. Do you start with the easiest ones? Or the most useful ones? Both? With so many options these days, why learn JavaScript?</p>
     {text.map((value, index)=>{
         return <p key={index}>{value}</p>
+        
+        
     })}
 </article>
 
